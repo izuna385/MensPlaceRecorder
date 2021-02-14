@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  title: MyString
+  url: MyString
+  address: MyString
+  weekday_open_time: MyString
+  holiday_open_time: MyString
+  description: MyString
+  is_counter_exist: 1
+  is_private_room_exist: 1
+  oshare_value: 1.5
+  image: MyString
+  category: one
+
+two:
+  user: two
+  title: MyString
+  url: MyString
+  address: MyString
+  weekday_open_time: MyString
+  holiday_open_time: MyString
+  description: MyString
+  is_counter_exist: 1
+  is_private_room_exist: 1
+  oshare_value: 1.5
+  image: MyString
+  category: two
