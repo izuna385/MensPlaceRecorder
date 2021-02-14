@@ -15,24 +15,25 @@ class PostsController < ApplicationController
   end
   
   def edit
+    # TODO: editアクションの追加
   end
 
   def create
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      flash[:success] = 'メッセージを投稿しました。'
+      flash[:success] = '場所の記録を投稿しました。'
       redirect_to root_url
     else
       @posts = current_user.posts.order(id: :desc).page(params[:page])
-      flash.now[:danger] = 'メッセージの投稿に失敗しました。'
+      flash.now[:danger] = '場所の記録の投稿に失敗しました。'
       render 'toppages/index'
     end
   end
 
   def destroy
     @post.destroy
-    flash[:success] = 'メッセージを削除しました。'
+    flash[:success] = '場所の記録を削除しました。'
     redirect_back(fallback_location: root_path)
   end
   
