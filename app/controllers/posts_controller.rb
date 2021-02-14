@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
-  before_action :require_user_logged_in
+  before_action :require_user_logged_in, only: [:new, :create, :destroy]
   before_action :correct_user, only: [:destroy]
+  
   def index
+    @posts = Post.all
   end
 
   def show
