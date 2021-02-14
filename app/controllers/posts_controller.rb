@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :require_user_logged_in, only: [:new, :create, :destroy]
+  before_action :require_user_logged_in, only: [:new, :create, :destroy, :edit]
   before_action :correct_user, only: [:destroy]
   
   def index
@@ -7,10 +7,14 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def new
     @post = Post.new
+  end
+  
+  def edit
   end
 
   def create
