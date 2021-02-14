@@ -1,5 +1,5 @@
-<ul class="list-unstyled">
-  <% posts.each do |post| %>
+<% posts.each do |post| %>
+  <div class="col-sm-3">
     <li class="media mb-3">
       <img class="mr-2 rounded" src="<%= gravatar_url(post.user, { size: 50 }) %>" alt="">
       <div class="media-body">
@@ -11,6 +11,6 @@
         </div>
       </div>
     </li>
-  <% end %>
-  <%= paginate posts %>
-</ul>
+  </div>
+<% end %>
+<%= paginate posts %>
