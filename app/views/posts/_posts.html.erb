@@ -10,6 +10,7 @@
           <p><%= post.description %></p>
         </div>
       </div>
+    <%= render 'favorites/like_button', post: post %>
     </li>
   </div>
 <% end %>
