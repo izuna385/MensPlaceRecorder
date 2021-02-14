@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 
   def create
     @post = current_user.posts.build(post_params)
-    # @post.save!
+
     if @post.save
       flash[:success] = 'メッセージを投稿しました。'
       redirect_to root_url
