@@ -1,20 +1,4 @@
 Rails.application.routes.draw do
-  get 'categories/index'
-  get 'categories/show'
-  get 'categories/new'
-  get 'categories/create'
-  get 'categories/edit'
-  get 'categories/destroy'
-  get 'favorites/create'
-  get 'favorites/destroy'
-  get 'posts/index'
-  get 'posts/show'
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/destroy'
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
   root to: 'toppages#index'
 
   get 'login', to: 'sessions#new'
@@ -30,6 +14,7 @@ Rails.application.routes.draw do
   end
     
   resources :posts #, only: [:create, :destroy, :show, :index, :new]
+  resources :categories
   resources :favorites, only: [:create, :destroy]
 
 end
