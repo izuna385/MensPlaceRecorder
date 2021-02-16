@@ -14,7 +14,7 @@
  *= require_self
  */
 body {
-  background-image: url(https://images.pexels.com/photos/1002740/pexels-photo-1002740.jpeg);
+  /*background-image: url(https://images.pexels.com/photos/1002740/pexels-photo-1002740.jpeg);*/
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

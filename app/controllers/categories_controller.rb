@@ -19,4 +19,12 @@ class CategoriesController < ApplicationController
 
   def destroy
   end
+  
+  private
+  
+=begin
+  def admin_user
+    unless current_user.admin redirect_to root_url
+  end
+=end
 end
