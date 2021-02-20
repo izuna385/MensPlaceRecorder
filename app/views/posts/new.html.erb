@@ -11,13 +11,23 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :category_id, 'カテゴリid' %>
+        <%= f.label :category_id, '場所の種類' %>
         <%= f.collection_select :category_id, Category.all, :id, :name, include_blank: "選択して下さい" %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :url, 'URL' %>
+        <%= f.text_field :url, class: 'form-control' %>
       </div>
 
       <div class="form-group">
         <%= f.label :description, '説明' %>
         <%= f.text_field :description, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
       </div>
 
       <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>

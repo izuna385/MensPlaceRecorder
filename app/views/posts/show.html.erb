@@ -3,3 +3,8 @@
 <p>title <%= @post.title %></p>
 <p>category <%= @post.category_id %></p>
 <p><%= @post.description %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @post.image.url if @post.image? %>
+</p>
