@@ -4,6 +4,13 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
+    <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
+        <%= render 'categories/category_nav_bar', categories: categories %>
+      </ul>
+    </div>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav">

@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
 
   include SessionsHelper    
-
+  include CategoriesHelper
+  
   private
 
   def require_user_logged_in
@@ -14,4 +15,6 @@ class ApplicationController < ActionController::Base
     @count_posts = user.posts.count
     @count_likes = user.liked_posts.count
   end
+  
+  
 end
