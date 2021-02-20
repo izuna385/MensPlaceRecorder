@@ -5,7 +5,8 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id]) #/categories/1
-    @posts = @category.posts
+    @posts = @category.posts.page(params[:page])
+    # @posts = @category.posts
   end
 
   def new
