@@ -1,8 +1,4 @@
 <h1><%= @category.name %></h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<%= render 'posts/posts', posts: @posts %>
 
-
-<div class="row">
-  <%= render 'posts/posts', posts: @posts %>
-</div>
 

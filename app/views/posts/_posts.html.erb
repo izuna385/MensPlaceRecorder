@@ -1,6 +1,8 @@
+
+<div class="row">
 <% posts.each do |post| %>
-  <div class="col-sm-12">
-    <li class="media ">
+  <ul class="col-sm-4">
+    <li class="media">
       <img class="mr-2 rounded" src="<%= gravatar_url(post.user, { size: 50 }) %>" alt="">
       <div class="media-body">
         <div>
@@ -14,6 +16,7 @@
       </div>
     <%= render 'favorites/like_button', post: post %>
     </li>
-  </div>
+  </ul>
 <% end %>
 <%= paginate posts %>
+</div>
