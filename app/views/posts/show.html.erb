@@ -1,5 +1,9 @@
-<h1><%= @post.title %> の場所詳細ページ</h1>
-
+<div class="col-sm-10">
+<%= @post.title %> の場所詳細ページ
+</div>
+<div class="col-sm-2">
+<%= render 'favorites/like_button', post: @post %>
+</div>
 <p>title <%= @post.title %></p>
 <p>category <%= @category.name %></p>
 
