@@ -5,7 +5,9 @@
 
 <p><%= @post.description %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @post.image.url if @post.image? %>
-</p>
+<div class="col-sm-8">
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag @post.image.url if @post.image? %>
+  </p>
+</div>

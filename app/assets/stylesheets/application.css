@@ -43,3 +43,7 @@
   height: 500px;
   overflow: hidden;
 }
+
+img {
+   max-width: 100%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
+}
