@@ -4,7 +4,15 @@
   <div class="col-sm-6 offset-sm-3">
 
     <%= form_with(model: @post, local: true) do |f| %>
-      <!-- バリデーションエラーの原因　エラーのパーシャル -->
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
       <div class="form-group">
         <%= f.label :title, '店名' %>
         <%= f.text_field :title, class: 'form-control' %>
