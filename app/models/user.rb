@@ -7,8 +7,8 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :posts
-  has_many :favorites
-  has_many :liked_posts, through: :favorites, source: :post
+  has_many :favorites, dependent: :destroy
+  has_many :liked_posts, through: :favorites, source: :post, dependent: :destroy
 
   def like(one_post)
     self.favorites.find_or_create_by(post_id: one_post.id)
