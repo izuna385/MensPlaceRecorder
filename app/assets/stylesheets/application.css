@@ -47,3 +47,7 @@
 img {
    max-width: 100%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
 }
+
+#new_form {
+  margin-bottom: 50px ;
+}
