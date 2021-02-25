@@ -1,17 +1,22 @@
-<div class="col-sm-10">
-<%= @post.title %> の場所詳細ページ
-</div>
-<div class="col-sm-2">
-<%= render 'favorites/like_button', post: @post %>
-</div>
-<p>title <%= @post.title %></p>
-<p>category <%= @category.name %></p>
+<div class="col-md-12 mb-6">
+  <h1><%= @post.title %> の場所詳細ページ</h1> 
+    <div class="col-sm-2 mb-4">
+      <%= render 'favorites/like_button', post: @post %>
+    </div>
+  <p>店名：<%= @post.title %></p>
+  <p>カテゴリ： <%= @category.name %></p>
+  
+  <p>説明：<%= @post.description %></p>
+  
+    <p>
+      <strong>Image:</strong>
+      <% if @post.image? %>
+        <%= image_tag @post.image.url %>
+      <% else %>
+        <p>No Image</p>
+      <% end %>
+    </p>
+  
+  
 
-<p><%= @post.description %></p>
-
-<div class="col-sm-8">
-  <p>
-    <strong>Image:</strong>
-    <%= image_tag @post.image.url if @post.image? %>
-  </p>
 </div>
