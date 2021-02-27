@@ -1,4 +1,4 @@
-<div class="col-md-12 mb-6">
+<div class="col-md-12 mb-6" id="margin_bottom_for_contents">
   <h1><%= @post.title %> の場所詳細ページ</h1> 
     <div class="col-sm-2 mb-4">
       <%= render 'favorites/like_button', post: @post %>
@@ -10,15 +10,12 @@
   <p>営業時間（休日）： <%= @post.holiday_open_time %></p>
   <p>説明：<%= @post.description %></p>
   
-    <p>
+
       <strong>Image:</strong>
       <% if @post.image? %>
-        <%= image_tag @post.image.url %>
+        <%= image_tag @post.image.url , :alt => "Postの画像" %>
       <% else %>
         <p>No Image</p>
       <% end %>
-    </p>
-  
-  
 
 </div>

@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :favorites, only: [:create, :destroy]
   
-  get '*not_found' => 'application#routing_error'
-  post '*not_found' => 'application#routing_error'
+  # 例外
+  get '*not_found', to: 'application#routing_error'
+  post '*not_found', to: 'application#routing_error'
 
 end
