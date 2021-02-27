@@ -5,11 +5,16 @@
     </div>
   <p>店名：<%= @post.title %></p>
   <p>カテゴリ： <%= @category.name %></p>
+  <p>
+    <% if @post.url.present? %>
+      URL: <%= link_to "外部リンク", @post.url %>
+    <% else %>
+    <% end %>
+  </p>
   <p>住所： <%= @post.address %></p>
   <p>営業時間（平日）： <%= @post.weekday_open_time %></p>
   <p>営業時間（休日）： <%= @post.holiday_open_time %></p>
   <p>説明：<%= @post.description %></p>
-  
 
       <strong>Image:</strong>
       <% if @post.image? %>

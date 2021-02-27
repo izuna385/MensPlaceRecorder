@@ -5,4 +5,5 @@ class Post < ApplicationRecord
   validates :category_id, presence: true
   validates :description, presence: true, length: { maximum: 255 }
   mount_uploader :image, ImageUploader
+  validates :url, allow_nil: true, format: /\A#{URI::regexp(%w(http https))}\z/
 end
