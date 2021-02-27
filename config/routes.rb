@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   resources :posts #, only: [:create, :destroy, :show, :index, :new]
   resources :categories
   resources :favorites, only: [:create, :destroy]
+  
+  get '*not_found' => 'application#routing_error'
+  post '*not_found' => 'application#routing_error'
 
 end

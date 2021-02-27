@@ -8,9 +8,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    Rails.logger.info('***********debug*************')
-    Rails.logger.info(params)
-    Rails.logger.info(@post.category_id)
     @category = Category.find_by(id: @post.category_id)
   end
 
