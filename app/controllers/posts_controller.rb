@@ -45,7 +45,11 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :category_id, :url, :image)
+    params.require(:post).permit(:title, :description, :category_id, :url, 
+                                 :image, :weekday_open_time, :holiday_open_time,
+                                 :is_counter_exist, :is_private_room_exist, 
+                                 :oshare_value, :address
+    )
   end
 
   def correct_user
